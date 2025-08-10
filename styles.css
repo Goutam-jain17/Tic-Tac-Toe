@@ -1,0 +1,112 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  margin: 0;
+  padding: 40px 20px;
+  color: #333;
+  user-select: none;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+label {
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 1.1em;
+}
+
+#mode {
+  font-size: 1em;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#status {
+  margin: 20px 0;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  min-height: 28px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 110px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin-bottom: 25px;
+  background: rgba(255,255,255,0.25);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cell {
+  width: 110px;
+  height: 110px;
+  background-color: #ffffffcc;
+  border-radius: 15px;
+  border: 3px solid transparent;
+  font-size: 3.5em;
+  line-height: 110px;
+  cursor: pointer;
+  color: #333;
+  font-weight: 700;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  user-select: none;
+}
+
+.cell:hover {
+  background-color: #e0f7fa;
+  border-color: #00bcd4;
+  color: #007c91;
+}
+
+.cell.X {
+  color: #ff5252; /* red-ish for X */
+}
+
+.cell.O {
+  color: #2196f3; /* blue-ish for O */
+}
+
+button {
+  background: #2196f3;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 1.1em;
+  padding: 12px 36px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+button:hover {
+  background: #1976d2;
+  box-shadow: 0 8px 24px rgba(25, 118, 210, 0.6);
+}
